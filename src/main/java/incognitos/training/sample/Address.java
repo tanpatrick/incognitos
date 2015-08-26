@@ -1,15 +1,17 @@
-package fpt.training.spring.sample;
+package incognitos.training.sample;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Address {
 
+    private static final Logger LOGGER = Logger.getLogger(Address.class);
     private String address;
     private String zipCode;
 
     public Address() {
-        System.out.println(" ... init address");
+        LOGGER.info("INIT: Address()");
     }
 
     public String getAddress() {
